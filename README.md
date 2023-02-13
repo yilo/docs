@@ -13,3 +13,5 @@ pip3 install mkdocs-jupyter
 pip3 install mkdocs-drawio-exporter
 
 pip3 install mkdocs-video
+
+mkdocs gh-deploy -c -b gh-pages

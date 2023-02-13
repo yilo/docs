@@ -4,74 +4,160 @@ site_url: https://yilo.github.io/docs/
 
 use_directory_urls: False
 
-extra_css:
-  - stylesheets/extra.css
+# extra_css:
+#   - stylesheets/extra.css
+
+
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     primary: black
     schema: slate
+
+  font:
+    text: Noto Serif
+    code: Roboto Mono
+
   features:
-    - content.code.annotate
-    - toc.integrate
+    # - toc.integrate
     - navigation.tabs
     # - navigation.tabs.sticky
-    - navigation.sections
-  
+    # - navigation.sections
+    - navigation.indexes # link an index page to its parent folder
+    - navigation.top 
+    - navigation.tracking
+
+    - content.code.annotate # add comment to code blocks
+    - content.tabs.link # link tabs with the same label
+
+plugins:
+  - awesome-pages:
+  - include-markdown
+  - search
+  - charts
+  # - sane_lists # make better lists
+  # - drawio-exporter
+  - kroki
+  # - mkdocs-jupyter:
+  #     ignore_h1_titles: True
+  #     kernel_name: python3
+  #     execute: False
+  - mkdocs-video:
+      is_video: True
+      video_autoplay: True
+  # - blogging:
+  #     dirs: # The directories to be included
+  #       - blog
+  #     features:
+  #       tags: {}
+
+  #
+  # Python Markdown
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+  #
 markdown_extensions:
-  - meta
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - tables
-  - mdx_spanner
-  - attr_list
-  - md_in_html
-  - def_list
-  - pymdownx.extra
-  - pymdownx.superfences:
+  - abbr # add a small tooltip to elements
+  - admonition # add call-out blocks
+  - attr_list # allow to add HTML attributes and CSS classes
+  - def_list # add description lists
+  - footnotes # define inline footnotes
+  - meta # attach arbitrary key-value pairs to a document
+  - md_in_html # allow to write Markdown inside HTML elements
+  - tables # create tables in Markdown
+  - toc: # generate a table of contents from documents
+      permalink: '#' # anchor
+      toc_depth: 4 # header 1 to header 4
+      slugify: !!python/name:pymdownx.slugs.uslugify # convert title to html-compatible text
+  - sane_lists # make better lists
+  - smarty: # convert some special characters
+      smart_angled_quotes: true
+
+
+#
+  # Python Markdown Extensions
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/
+  #
+  - pymdownx.arithmatex: # render math equations
+      generic: true
+  # - pymdownx.betterem: # improve the detection of Markup to emphasize text in Markdown
+      # smart_enable: all
+  - pymdownx.caret # define superscript
+  - pymdownx.mark # highlight text
+  - pymdownx.tilde # define subscript
+  - pymdownx.critic # track changes
+  - pymdownx.details # add collapsible call-outs
+  - pymdownx.emoji: # add inlines bundled and custom icons and emojis 
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences: 
       custom_fences:
         - name: vegalite
           class: vegalite
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite  
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format          
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg 
-  - pymdownx.tasklist:
+          format: !!python/name:pymdownx.superfences.fence_code_format 
+  - pymdownx.highlight: # highlight of code blocks
+      linenums_style: pymdownx-inline
+      # anchor_linenums: true # create anchor link on each line of code
+  - pymdownx.inlinehilite # highlight inline code blocks
+  - pymdownx.smartsymbols # convert some sequences of characters into their corresponding symbols
+  - pymdownx.snippets: #  embed content from arbitrary files into a document
+      check_paths: true
+  - pymdownx.tabbed: # group related content and code blocks under accessible tabs
+      alternate_style: true
+  - pymdownx.tasklist: # define list of task with checkbox
       custom_checkbox: true
-  - pymdownx.tabbed:
-      alternate_style: true   
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.escapeall:
+      hardbreak: true # use \ to create new line
+      nbsp: true # use \<space> to create &nbsp;
+  # - pymdownx.keys # syntax ++ctrl+c++ does not look clear in MD document
   - pymdownx.progressbar
 
+  # - mdx_spanner
+  # - pymdownx.superfences:
+  #     custom_fences:
+  #       - name: vegalite
+  #         class: vegalite
+  #         format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite  
+  #       - name: mermaid
+  #         class: mermaid
+  #         format: !!python/name:pymdownx.superfences.fence_code_format          
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg 
+  # - pymdownx.tasklist:
+  #     custom_checkbox: true
+  # - pymdownx.tabbed:
+  #     alternate_style: true   
+  # - pymdownx.highlight:
+  #     anchor_linenums: true
+  # - pymdownx.inlinehilite
+  # - pymdownx.snippets
+  # - pymdownx.progressbar
 
-plugins:
-  - include-markdown
-  - search
-  - charts
-  # - drawio-exporter
-  - kroki
-  - mkdocs-jupyter:
-      ignore_h1_titles: True
-      kernel_name: python3
-      execute: False
-  - mkdocs-video:
-      is_video: True
-      video_autoplay: True
-  - blogging:
-      dirs: # The directories to be included
-        - blog
-      features:
-        tags: {}
+#
+  # Extra extensions
+  #
+  - markdown_captions # add caption to figures
+  - customblocks # use ::: to create a new <div>
+  - cell_row_span # merge cells in a table
+  # - kbdextension # syntax [[ctrl]][[c]] does not look clear in MD document
 
+
+
+
+extra_css:
+  - assets/view-bigimg.css
+  - assets/extra.css
 extra_javascript:
+  - assets/mathjax.js # must be before mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/view-bigimg.js
+  - assets/extra.js
   - https://cdn.jsdelivr.net/npm/vega@5
   - https://cdn.jsdelivr.net/npm/vega-lite@5
   - https://cdn.jsdelivr.net/npm/vega-embed@6

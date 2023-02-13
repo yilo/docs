@@ -6,12 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yilo.github.io/docs/blog/HA.html</loc>
+         <loc>https://yilo.github.io/docs/blog/Financy/Financial-Indicators.html</loc>
          <lastmod>2023-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yilo.github.io/docs/blog/Hot-Key.html</loc>
+         <loc>https://yilo.github.io/docs/blog/Tech/HA.html</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yilo.github.io/docs/blog/Tech/Hot-Key.html</loc>
          <lastmod>2023-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

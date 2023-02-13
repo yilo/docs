@@ -65,6 +65,11 @@ plugins:
   - mkdocs-video:
       is_video: True
       video_autoplay: True
+  - blogging:
+      dirs: # The directories to be included
+        - blog
+      features:
+        tags: {}
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/vega@5

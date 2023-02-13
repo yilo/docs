@@ -6,7 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yilo.github.io/docs/blog/index.html</loc>
+         <loc>https://yilo.github.io/docs/blog/HA.html</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yilo.github.io/docs/blog/Hot-Key.html</loc>
          <lastmod>2023-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -17,6 +22,11 @@
     </url>
     <url>
          <loc>https://yilo.github.io/docs/opensources/index.html</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yilo.github.io/docs/tags/index.html</loc>
          <lastmod>2023-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

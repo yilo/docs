@@ -1,4 +1,21 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -14,10 +31,8 @@
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
-      
-        <title>YL</title>
-      
-    
+    <title> - YL</title>
+
     
       <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
       
@@ -38,12 +53,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="assets/view-bigimg.css">
+    
+      <link rel="stylesheet" href="assets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -52,6 +69,23 @@
     
     
     
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content=" - YL" />
+    <meta property="og:description" content=" - None" />
+    <meta property="og:url" content="https://yilo.github.io/docs/index.html" />
+    <meta property="og:image" content="https://yilo.github.io/docs/assets/banner.jpg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content=" - YL" />
+    <meta name="twitter:description" content=" - None" />
+    <meta name="twitter:image" content="https://yilo.github.io/docs/assets/banner.jpg" />
+
   </head>
   
   
@@ -107,7 +141,31 @@
             
           </span>
         </div>
-      </div>
+        
+            <style>
+                .md-header__nav {
+                    float: right;
+                }
+                .md-header__nav__inner:not([hidden]) {
+                    display: flex;
+                }
+            </style>
+            <div class="md-header__nav">
+                
+                <nav class="md-header__nav__inner">
+                    
+                    
+                        
+                        <a href="blog/HA.html" aria-label="Next: High Availabilty" rel="next">
+                            <div class="md-footer__button md-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+                            </div>
+                        </a>
+                    
+                </nav>
+            </div>
+        
+    </div>
     </div>
     
     
@@ -183,7 +241,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="blog/index.html" class="md-tabs__link">
+      <a href="blog/HA.html" class="md-tabs__link">
         Blog
       </a>
     </li>
@@ -231,6 +289,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="tags/index.html" class="md-tabs__link">
+        Tags
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="team/index.html" class="md-tabs__link">
         Team
       </a>
@@ -247,19 +321,18 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+    
+    
+
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+                
 
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="YL" class="md-nav__button md-logo" aria-label="YL" data-md-component="logo">
       
@@ -283,7 +356,13 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" checked
+        onchange='(function(){
+          var _pid = "__nav_1".slice(0, -2);
+          var _pel = document.getElementById(_pid);
+          _pel.checked  = false;
+        })()'
+      >
       
       
         
@@ -350,6 +429,12 @@
       
       
       
+        
+          
+        
+          
+        
+      
       
         <label class="md-nav__link" for="__nav_2">
           Blog
@@ -369,8 +454,22 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/index.html" class="md-nav__link">
-        Lorem ipsum dolor sit amet
+      <a href="blog/HA.html" class="md-nav__link">
+        High Availabilty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blog/Hot-Key.html" class="md-nav__link">
+        Hot Key - Solution
       </a>
     </li>
   
@@ -398,11 +497,19 @@
       
       
       
+        
+          
+            
+          
+        
       
-        <label class="md-nav__link" for="__nav_3">
-          Knowledge
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="knowledge/index.html">Knowledge</a>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Knowledge" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -446,11 +553,19 @@
       
       
       
+        
+          
+            
+          
+        
       
-        <label class="md-nav__link" for="__nav_4">
-          Opensources
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="opensources/index.html">Opensources</a>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Opensources" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
@@ -494,14 +609,84 @@
       
       
       
+        
+          
+            
+          
+        
       
-        <label class="md-nav__link" for="__nav_5">
-          Team
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="tags/index.html">Tags</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tags" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
+          Tags
         </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tags/index.html" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="team/index.html">Team</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Team" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Team
         </label>
@@ -543,29 +728,468 @@
     
   </ul>
 </nav>
-                  </div>
-                </div>
-              </div>
+
+                
+                
+                    <br>
+                    <br>
+                    <div class="tag-cloud-nav">
+                        
+
+
+
+
+
+  
+
+  
+    
+    
+      
+        
+      
+    
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+          
+        
+      
+    
+  
+
+  
+    
+    
+      
+        
+        
+        
+        
+          
+          
+            
             
             
           
+        
+          
+          
+        
+        
+        
+      
+    
+      
+        
+        
+        
+        
+          
+          
+        
+          
+          
+            
+            
+            
+          
+        
+        
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<style>
+    .tag-cloud {
+        margin-top:0;
+        margin-bottom: 0.5em;
+    }
+    .tag-cloud-content {
+        padding: 0 0.6rem;
+        
+    }
+</style>
+
+<p class="md-nav tag-cloud">
+  <label class="md-nav__title">Tag cloud</label>
+</p>
+<div class="tag-cloud-content">
+    
+        
+            
+            
+            
+            <a class="tag" href="https://yilo.github.io/docs/tags/#2023">
+                <span class="tag-name" style="
+                    
+                        
+                    
+                        font-size:0.6rem;
+                    
+                    color:DarkGoldenrod;
+                ">2023&nbsp;
+                </span>
+                <!--<sup class="tag-count">2</sup>-->
+            </a>
+        
+            
+            
+            
+            <a class="tag" href="https://yilo.github.io/docs/tags/#Architecture">
+                <span class="tag-name" style="
+                    
+                        
+                    
+                        font-size:0.6rem;
+                    
+                    color:DarkGreen;
+                ">Architecture&nbsp;
+                </span>
+                <!--<sup class="tag-count">2</sup>-->
+            </a>
+        
+    
+</div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+                
+
+                
+                
+                    <div class="tag-cloud-toc">
+                        
+
+
+
+
+
+  
+
+  
+    
+    
+      
+        
+      
+    
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+          
+        
+      
+    
+  
+
+  
+    
+    
+      
+        
+        
+        
+        
+          
+          
+            
+            
+            
+          
+        
+          
+          
+        
+        
+        
+      
+    
+      
+        
+        
+        
+        
+          
+          
+        
+          
+          
+            
+            
+            
+          
+        
+        
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<style>
+    .tag-cloud {
+        margin-top:0;
+        margin-bottom: 0.5em;
+    }
+    .tag-cloud-content {
+        padding: 0 0.6rem;
+        
+    }
+</style>
+
+<p class="md-nav tag-cloud">
+  <label class="md-nav__title">Tag cloud</label>
+</p>
+<div class="tag-cloud-content">
+    
+        
+            
+            
+            
+            <a class="tag" href="https://yilo.github.io/docs/tags/#2023">
+                <span class="tag-name" style="
+                    
+                        
+                    
+                        font-size:0.6rem;
+                    
+                    color:DarkGoldenrod;
+                ">2023&nbsp;
+                </span>
+                <!--<sup class="tag-count">2</sup>-->
+            </a>
+        
+            
+            
+            
+            <a class="tag" href="https://yilo.github.io/docs/tags/#Architecture">
+                <span class="tag-name" style="
+                    
+                        
+                    
+                        font-size:0.6rem;
+                    
+                    color:DarkGreen;
+                ">Architecture&nbsp;
+                </span>
+                <!--<sup class="tag-count">2</sup>-->
+            </a>
+        
+    
+</div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+    
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+
+<style>
+    .md-typeset .cover {
+        margin-bottom: 1em;
+    }
+    .md-typeset .page-category {
+        color: gray;
+        font-size: large;
+    }
+    .md-typeset .page-title {
+        margin-left: -0.0625em;
+    }
+    .md-typeset .page-extra {
+        color: gray;
+        font-size: small;
+    }
+    .md-typeset .page-tags {
+        margin: 0;
+    }
+    .md-typeset .page-date {
+        margin: 0;
+        text-align: end;
+    }
+    @media print {
+        .md-typeset .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .md-typeset .cover + * {
+            margin-top: 0;
+        }
+    }
+</style>
+
+<div class="cover">
+    
+    
+
+    
+    <h1 class="page-title"> YL </h1>
+
+    
+    
+
+    
+        <div class="page-extra row">
+            <div class="col">
+            
+            
+            </div>
+            <div class="col">
+                <p class="page-date">
+                    <span>
+                    
+                    </span>
+                </p>
+            </div>
+        </div>
+    
+</div>
+
+<hr class="screen-only">
+
+
+<style>
+    .md-typeset .toc {
+        display: none;
+    }
+    .md-typeset .toc label {
+        display: none;
+    }
+    .md-typeset .toc .md-nav {
+        font-size: unset;
+        line-height: 1.6;
+    }
+    .md-typeset .toc .md-nav--secondary {
+        margin-left: -2em;
+    }
+    .md-typeset .toc .md-nav__list {
+        margin: 0;
+    }
+    .md-typeset .toc ul {
+        list-style: none;
+    }
+    @media print {
+        .md-typeset .toc {
+            display: block;
+            page-break-after: always;
+        }
+        .md-typeset .toc .md-nav__link {
+            color: var(--md-typeset-a-color);
+        }
+        .md-typeset .toc .md-nav__link.md-nav__link--active {
+            font-weight: unset;
+        }
+        .md-typeset .toc + * {
+            margin-top: 0;
+        }
+    }
+</style>
+
+<div class="toc">
+    <h2>Table of Content</h2>
+    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+</div>
+
+
+
+    
+    <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">#</a></h1>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
+<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
@@ -574,14 +1198,27 @@ docs/
 
 
 
+    
+    <!-- Get setting from mkdocs.yml, but allow page-level overrides -->
 
 
-                
+
+<!-- Inject Disqus into current page -->
+
+
+
               </article>
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -592,13 +1229,13 @@ docs/
       
       
         
-        <a href="blog/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Lorem ipsum dolor sit amet" rel="next">
+        <a href="blog/HA.html" class="md-footer__link md-footer__link--next" aria-label="Next: High Availabilty" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lorem ipsum dolor sit amet
+              High Availabilty
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -629,12 +1266,22 @@ docs/
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "toc.integrate", "navigation.tabs", "navigation.sections"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "content.code.annotate", "content.tabs.link"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
         <script src="js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="assets/view-bigimg.js"></script>
+      
+        <script src="assets/extra.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
       

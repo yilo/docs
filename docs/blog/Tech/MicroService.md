@@ -102,3 +102,10 @@ Risk
 </div>
 - 强一致方案
   
+
+
+---
+
+#### 参考
+
+<center><embed src="/docs/assets/pdf/微服务治理.pdf" type="application/pdf" width="100%" height="500"></center>

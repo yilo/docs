@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://yilo.github.io/docs/blog/Tech/Message/ExactOnce.html</loc>
+         <lastmod>2023-02-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://yilo.github.io/docs/knowledge/index.html</loc>
          <lastmod>2023-02-15</lastmod>
          <changefreq>daily</changefreq>

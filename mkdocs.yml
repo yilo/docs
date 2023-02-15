@@ -21,10 +21,10 @@ theme:
     code: Roboto Mono
 
   features:
-    # - toc.integrate
+    - toc.integrate
     - navigation.tabs
     # - navigation.tabs.sticky
-    # - navigation.sections
+    - navigation.path
     - navigation.indexes # link an index page to its parent folder
     - navigation.top 
     - navigation.tracking
@@ -38,7 +38,8 @@ plugins:
   - search
   - charts
   # - sane_lists # make better lists
-  # - drawio-exporter
+  - drawio-exporter
+  - glightbox
   - kroki
   # - mkdocs-jupyter:
   #     ignore_h1_titles: True

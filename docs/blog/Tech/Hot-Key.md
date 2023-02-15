@@ -20,6 +20,7 @@ tags:
 
 - Type of Hot Key
 
+---
 
 <div class="row" markdown>
 <div class="col" markdown>
@@ -134,6 +135,8 @@ tags:
 
 </div>
 </div>
+
+---
 
 <div class="row" markdown>
 <div class="col" markdown>

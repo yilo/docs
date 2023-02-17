@@ -5,35 +5,35 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Introduction Of SRE" name="description"/>
-<link href="https://yilo.github.io/docs/blog/Tech/Ops.html" rel="canonical"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="Introduction about Architecture." name="description"/>
+<link href="https://yilo.github.io/docs/blog/Tech/Message/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>SRE - YL</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>消息丢失 - YL</title>
+<link href="../../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Roboto Mono"}</style>
-<link href="../../assets/view-bigimg.css" rel="stylesheet"/>
-<link href="../../assets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/view-bigimg.css" rel="stylesheet"/>
+<link href="../../../assets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <!-- Open Graph -->
 <meta content="website" property="og:type">
-<meta content="SRE - YL" property="og:title">
-<meta content="Introduction Of SRE - None" property="og:description">
-<meta content="https://yilo.github.io/docs/blog/Tech/Ops.html" property="og:url">
+<meta content="消息丢失 - YL" property="og:title">
+<meta content="Introduction about Architecture. - None" property="og:description">
+<meta content="https://yilo.github.io/docs/blog/Tech/Message/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html" property="og:url">
 <meta content="https://yilo.github.io/docs/assets/banner.jpg" property="og:image">
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <!-- Twitter Cards -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="SRE - YL" name="twitter:title"/>
-<meta content="Introduction Of SRE - None" name="twitter:description"/>
+<meta content="消息丢失 - YL" name="twitter:title"/>
+<meta content="Introduction about Architecture. - None" name="twitter:description"/>
 <meta content="https://yilo.github.io/docs/assets/banner.jpg" name="twitter:image"/>
-</meta></meta></meta></meta></meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+</meta></meta></meta></meta></meta><link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -44,13 +44,13 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sre">
+<a class="md-skip" href="#消息丢失">
           Skip to content
         </a>
 </div>
@@ -58,7 +58,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="YL" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="YL">
+<a aria-label="YL" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="YL">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -74,7 +74,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SRE
+              消息丢失
             
           </span>
 </div>
@@ -88,12 +88,12 @@
             </style>
 <div class="md-header__nav">
 <nav class="md-header__nav__inner">
-<a aria-label="Previous: MicroServices" href="MicroService.html" rel="prev">
+<a aria-label="Previous: Kafka" href="Kafka.html" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
 </a>
-<a aria-label="Next: Redis" href="Cache/Redis.html" rel="next">
+<a aria-label="Next: 消息有序性" href="%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html" rel="next">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
@@ -139,32 +139,32 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../index.html">
+<a class="md-tabs__link" href="../../../index.html">
       Welcome
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../Financy/Financial-Indicators.html">
+<a class="md-tabs__link md-tabs__link--active" href="../../Financy/Financial-Indicators.html">
         Blog
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../knowledge/index.html">
+<a class="md-tabs__link" href="../../../knowledge/index.html">
         Knowledge
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../opensources/index.html">
+<a class="md-tabs__link" href="../../../opensources/index.html">
         Opensources
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tags/index.html">
+<a class="md-tabs__link" href="../../../tags/index.html">
         Tags
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../team/index.html">
+<a class="md-tabs__link" href="../../../team/index.html">
         Team
       </a>
 </li>
@@ -178,14 +178,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="YL" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="YL">
+<a aria-label="YL" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="YL">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     YL
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../index.html">
+<a class="md-nav__link" href="../../../index.html">
         Welcome
       </a>
 </li>
@@ -214,12 +214,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Financy/Financial-Indicators.html">
+<a class="md-nav__link" href="../../Financy/Financial-Indicators.html">
         Financial Indicators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Financy/Stock.html">
+<a class="md-nav__link" href="../../Financy/Stock.html">
         Stocks
       </a>
 </li>
@@ -239,12 +239,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Management/Communication.html">
+<a class="md-nav__link" href="../../Management/Communication.html">
         Communication
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Management/Summary.html">
+<a class="md-nav__link" href="../../Management/Summary.html">
         Summary
       </a>
 </li>
@@ -264,7 +264,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Retrospective/log-delay.html">
+<a class="md-nav__link" href="../../Retrospective/log-delay.html">
         日志查询延迟
       </a>
 </li>
@@ -284,65 +284,34 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Arch.html">
+<a class="md-nav__link" href="../Arch.html">
         Architecture
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Database-HA.html">
+<a class="md-nav__link" href="../Database-HA.html">
         Database-HA
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="HA.html">
+<a class="md-nav__link" href="../HA.html">
         High Availabilty
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Hot-Key.html">
+<a class="md-nav__link" href="../Hot-Key.html">
         Hot Key - Solution
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="MicroService.html">
+<a class="md-nav__link" href="../MicroService.html">
         MicroServices
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" onchange='(function(){
-          var _pid = "__nav_2_4_6".slice(0, -2);
-          var _pel = document.getElementById(_pid);
-          _pel.checked  = false;
-        })()' type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          SRE
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="Ops.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ops.html">
         SRE
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sre">
-    SRE
-  </a>
-<nav aria-label="SRE" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#金融智能运维建设成熟度">
-    金融智能运维建设成熟度
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" id="__nav_2_4_7" type="checkbox"/>
@@ -357,15 +326,15 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Cache/Redis.html">
+<a class="md-nav__link" href="../Cache/Redis.html">
         Redis
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" id="__nav_2_4_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" id="__nav_2_4_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_4_8">
           Message
           <span class="md-nav__icon md-icon"></span>
@@ -377,22 +346,44 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/ExactOnce.html">
+<a class="md-nav__link" href="ExactOnce.html">
         Message
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/Kafka.html">
+<a class="md-nav__link" href="Kafka.html">
         Kafka
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Message/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html">
+<li class="md-nav__item md-nav__item--active">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" onchange='(function(){
+          var _pid = "__nav_2_4_8_3".slice(0, -2);
+          var _pel = document.getElementById(_pid);
+          _pel.checked  = false;
+        })()' type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          消息丢失
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html">
         消息丢失
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#场景">
+    场景
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html">
+<a class="md-nav__link" href="%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html">
         消息有序性
       </a>
 </li>
@@ -408,7 +399,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../knowledge/index.html">Knowledge</a>
+<a href="../../../knowledge/index.html">Knowledge</a>
 </div>
 <nav aria-label="Knowledge" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
@@ -417,7 +408,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../knowledge/index.html">
+<a class="md-nav__link" href="../../../knowledge/index.html">
         KNOWLEDGE
       </a>
 </li>
@@ -427,7 +418,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../opensources/index.html">Opensources</a>
+<a href="../../../opensources/index.html">Opensources</a>
 </div>
 <nav aria-label="Opensources" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
@@ -436,7 +427,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../opensources/index.html">
+<a class="md-nav__link" href="../../../opensources/index.html">
         OpenSource
       </a>
 </li>
@@ -446,7 +437,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../tags/index.html">Tags</a>
+<a href="../../../tags/index.html">Tags</a>
 </div>
 <nav aria-label="Tags" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -455,7 +446,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tags/index.html">
+<a class="md-nav__link" href="../../../tags/index.html">
         Tags
       </a>
 </li>
@@ -465,7 +456,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../team/index.html">Team</a>
+<a href="../../../team/index.html">Team</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -477,12 +468,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../team/index.html">
+<a class="md-nav__link" href="../../../team/index.html">
         Team Management
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../team/managing-up.html">
+<a class="md-nav__link" href="../../../team/managing-up.html">
         Team Management - Managing Up 向上管理
       </a>
 </li>
@@ -710,9 +701,9 @@
     }
 </style>
 <div class="cover">
-<h1 class="page-title"> SRE </h1>
+<h1 class="page-title"> 消息丢失 </h1>
 <p class="page-description">
-            Introduction Of SRE
+            Introduction about Architecture.
         </p>
 <div class="page-extra row">
 <div class="col">
@@ -727,9 +718,19 @@
                                 #Architecture  
                             </span>
 </a>
-<a class="tag" href="https://yilo.github.io/docs/tags/#Operation">
+<a class="tag" href="https://yilo.github.io/docs/tags/#Message">
 <span class="tag-name">
-                                #Operation  
+                                #Message  
+                            </span>
+</a>
+<a class="tag" href="https://yilo.github.io/docs/tags/#Kafka">
+<span class="tag-name">
+                                #Kafka  
+                            </span>
+</a>
+<a class="tag" href="https://yilo.github.io/docs/tags/#RocketMQ">
+<span class="tag-name">
+                                #RocketMQ  
                             </span>
 </a>
 </p>
@@ -788,27 +789,55 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sre">
-    SRE
+<a class="md-nav__link" href="#场景">
+    场景
   </a>
-<nav aria-label="SRE" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#金融智能运维建设成熟度">
-    金融智能运维建设成熟度
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
 </div>
-<h2 id="sre">SRE<a class="headerlink" href="#sre" title="Permanent link">#</a></h2>
-<h3 id="金融智能运维建设成熟度">金融智能运维建设成熟度<a class="headerlink" href="#金融智能运维建设成熟度" title="Permanent link">#</a></h3>
+<h1 id="消息丢失">消息丢失<a class="headerlink" href="#消息丢失" title="Permanent link">#</a></h1>
+<h2 id="场景">场景<a class="headerlink" href="#场景" title="Permanent link">#</a></h2>
+<p>一条消息从生产到消费一共要经过以下 3 个流程：</p>
+<ul>
+<li>Producer 发送到 Broker</li>
+<li>Broker 保存消息(持久化)</li>
+<li>Consumer 消费消息</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Producer 端丢失</p>
+<blockquote>
+<p>Producer 是异步发送消息的，也就是说如果你调用的是 producer.send(msg) 这个 API，那么它通常会立即返回，但此时你不能认为消息发送已成功完成,导致消息没有发送成功的因素也有很多：</p>
+<ul>
+<li>例如网络抖动，导致消息压根就没有发送到 Broker 端；</li>
+<li>或者消息本身不合格导致 Broker 拒绝接收（比如消息太大了，超过了 Broker 的承受能力）</li>
+</ul>
+<p><strong>解决方案</strong></p>
+<p>Producer 永远要使用带有回调通知的发送 API，也就是说不要使用 producer.send(msg)，而要使用 producer.send(msg, callback)</p>
+</blockquote>
+</li>
+<li>
+<p>Broker 端丢失</p>
+<blockquote>
+<p>Kafka 为了提高吞吐量和性能，采用异步批量的刷盘策略，先存储在也缓存中(Page Cache),按照一定的消息量和间隔时间进行刷盘。可能造成消息丢失。
+<strong>解决单个 broker 数据丢失问题</strong>
+ acks=0，producer 不等待 broker 的响应，效率最高，但是消息很可能会丢
+ acks=1，leader broker 收到消息后，不等待其他 follower 的响应，即返回 ack。也可以理解为 ack 数为1。此时，如果 follower 还没有收到 leader 同步的消息 leader 就挂了，那么消息会丢失.
+acks=-1(-1等效于all)，leader broker 收到消息后，挂起，等待所有 ISR 列表中的 follower 返回结果后，再返回 ack.</p>
+</blockquote>
+</li>
+<li>Consumer 端丢失<blockquote>
+<p>Consumer 没有正确消费消息，就把位移提交了，导致 Kafka 认为该消息已经被消费了，从而导致消息丢失。
+  <strong>解决方案</strong>
+确定消费完成后才提交消息，如果是多线程异步处理消费消息，Consumer Services不要开启自动提交位移”enable.auto.commit : false”，而是手动提交位移.</p>
+</blockquote>
+</li>
+</ul>
 <!-- Get setting from mkdocs.yml, but allow page-level overrides -->
 <!-- Inject Disqus into current page -->
-</article>
+</hr></article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
@@ -819,7 +848,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: MicroServices" class="md-footer__link md-footer__link--prev" href="MicroService.html" rel="prev">
+<a aria-label="Previous: Kafka" class="md-footer__link md-footer__link--prev" href="Kafka.html" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -828,17 +857,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              MicroServices
+              Kafka
             </div>
 </div>
 </a>
-<a aria-label="Next: Redis" class="md-footer__link md-footer__link--next" href="Cache/Redis.html" rel="next">
+<a aria-label="Next: 消息有序性" class="md-footer__link md-footer__link--next" href="%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Redis
+              消息有序性
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -863,14 +892,14 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.tracking", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="../../js/mkdocs-charts-plugin.js"></script>
-<script src="../../assets/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.tracking", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="../../../js/mkdocs-charts-plugin.js"></script>
+<script src="../../../assets/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../../assets/view-bigimg.js"></script>
-<script src="../../assets/extra.js"></script>
+<script src="../../../assets/view-bigimg.js"></script>
+<script src="../../../assets/extra.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>

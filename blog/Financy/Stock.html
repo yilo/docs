@@ -5,11 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Introduction Of SRE" name="description"/>
-<link href="https://yilo.github.io/docs/blog/Tech/Ops.html" rel="canonical"/>
+<link href="https://yilo.github.io/docs/blog/Financy/Stock.html" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>SRE - YL</title>
+<title>Stocks - YL</title>
 <link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -21,19 +20,19 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <!-- Open Graph -->
 <meta content="website" property="og:type">
-<meta content="SRE - YL" property="og:title">
-<meta content="Introduction Of SRE - None" property="og:description">
-<meta content="https://yilo.github.io/docs/blog/Tech/Ops.html" property="og:url">
-<meta content="https://yilo.github.io/docs/assets/banner.jpg" property="og:image">
+<meta content="Stocks - YL" property="og:title">
+<meta content=" - None" property="og:description">
+<meta content="https://yilo.github.io/docs/blog/Financy/Stock.html" property="og:url">
+<meta content="https://yilo.github.io/docs/assets/banner.jpg" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <!-- Twitter Cards -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="SRE - YL" name="twitter:title"/>
-<meta content="Introduction Of SRE - None" name="twitter:description"/>
+<meta content="Stocks - YL" name="twitter:title"/>
+<meta content=" - None" name="twitter:description"/>
 <meta content="https://yilo.github.io/docs/assets/banner.jpg" name="twitter:image"/>
-</meta></meta></meta></meta></meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+</meta></meta></meta></meta><link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -50,7 +49,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sre">
+<a class="md-skip" href="#stocks">
           Skip to content
         </a>
 </div>
@@ -74,7 +73,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SRE
+              Stocks
             
           </span>
 </div>
@@ -88,12 +87,12 @@
             </style>
 <div class="md-header__nav">
 <nav class="md-header__nav__inner">
-<a aria-label="Previous: MicroServices" href="MicroService.html" rel="prev">
+<a aria-label="Previous: Financial Indicators" href="Financial-Indicators.html" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
 </a>
-<a aria-label="Next: Redis" href="Cache/Redis.html" rel="next">
+<a aria-label="Next: Communication" href="../Management/Communication.html" rel="next">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
@@ -144,7 +143,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../Financy/Financial-Indicators.html">
+<a class="md-tabs__link md-tabs__link--active" href="Financial-Indicators.html">
         Blog
       </a>
 </li>
@@ -201,8 +200,8 @@
           Blog
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1">
           Financy
           <span class="md-nav__icon md-icon"></span>
@@ -214,14 +213,36 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Financy/Financial-Indicators.html">
+<a class="md-nav__link" href="Financial-Indicators.html">
         Financial Indicators
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Financy/Stock.html">
+<li class="md-nav__item md-nav__item--active">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" onchange='(function(){
+          var _pid = "__nav_2_1_2".slice(0, -2);
+          var _pel = document.getElementById(_pid);
+          _pel.checked  = false;
+        })()' type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Stocks
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Stock.html">
         Stocks
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hkg">
+    HKG
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -271,8 +292,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_4">
           Tech
           <span class="md-nav__icon md-icon"></span>
@@ -284,65 +305,34 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Arch.html">
+<a class="md-nav__link" href="../Tech/Arch.html">
         Architecture
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Database-HA.html">
+<a class="md-nav__link" href="../Tech/Database-HA.html">
         Database-HA
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="HA.html">
+<a class="md-nav__link" href="../Tech/HA.html">
         High Availabilty
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Hot-Key.html">
+<a class="md-nav__link" href="../Tech/Hot-Key.html">
         Hot Key - Solution
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="MicroService.html">
+<a class="md-nav__link" href="../Tech/MicroService.html">
         MicroServices
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" onchange='(function(){
-          var _pid = "__nav_2_4_6".slice(0, -2);
-          var _pel = document.getElementById(_pid);
-          _pel.checked  = false;
-        })()' type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          SRE
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="Ops.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tech/Ops.html">
         SRE
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sre">
-    SRE
-  </a>
-<nav aria-label="SRE" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#金融智能运维建设成熟度">
-    金融智能运维建设成熟度
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" id="__nav_2_4_7" type="checkbox"/>
@@ -357,7 +347,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Cache/Redis.html">
+<a class="md-nav__link" href="../Tech/Cache/Redis.html">
         Redis
       </a>
 </li>
@@ -377,22 +367,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/ExactOnce.html">
+<a class="md-nav__link" href="../Tech/Message/ExactOnce.html">
         Message
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/Kafka.html">
+<a class="md-nav__link" href="../Tech/Message/Kafka.html">
         Kafka
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html">
+<a class="md-nav__link" href="../Tech/Message/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1.html">
         消息丢失
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Message/%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html">
+<a class="md-nav__link" href="../Tech/Message/%E6%B6%88%E6%81%AF%E6%9C%89%E5%BA%8F.html">
         消息有序性
       </a>
 </li>
@@ -710,10 +700,7 @@
     }
 </style>
 <div class="cover">
-<h1 class="page-title"> SRE </h1>
-<p class="page-description">
-            Introduction Of SRE
-        </p>
+<h1 class="page-title"> Stocks </h1>
 <div class="page-extra row">
 <div class="col">
 <p class="page-tags">
@@ -722,14 +709,14 @@
                                 #2023  
                             </span>
 </a>
-<a class="tag" href="https://yilo.github.io/docs/tags/#Architecture">
+<a class="tag" href="https://yilo.github.io/docs/tags/#Financy">
 <span class="tag-name">
-                                #Architecture  
+                                #Financy  
                             </span>
 </a>
-<a class="tag" href="https://yilo.github.io/docs/tags/#Operation">
+<a class="tag" href="https://yilo.github.io/docs/tags/#Stocks">
 <span class="tag-name">
-                                #Operation  
+                                #Stocks  
                             </span>
 </a>
 </p>
@@ -788,24 +775,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sre">
-    SRE
+<a class="md-nav__link" href="#hkg">
+    HKG
   </a>
-<nav aria-label="SRE" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#金融智能运维建设成熟度">
-    金融智能运维建设成熟度
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
 </div>
-<h2 id="sre">SRE<a class="headerlink" href="#sre" title="Permanent link">#</a></h2>
-<h3 id="金融智能运维建设成熟度">金融智能运维建设成熟度<a class="headerlink" href="#金融智能运维建设成熟度" title="Permanent link">#</a></h3>
+<h1 id="stocks">Stocks<a class="headerlink" href="#stocks" title="Permanent link">#</a></h1>
+<h2 id="hkg">HKG<a class="headerlink" href="#hkg" title="Permanent link">#</a></h2>
 <!-- Get setting from mkdocs.yml, but allow page-level overrides -->
 <!-- Inject Disqus into current page -->
 </article>
@@ -819,7 +797,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: MicroServices" class="md-footer__link md-footer__link--prev" href="MicroService.html" rel="prev">
+<a aria-label="Previous: Financial Indicators" class="md-footer__link md-footer__link--prev" href="Financial-Indicators.html" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -828,17 +806,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              MicroServices
+              Financial Indicators
             </div>
 </div>
 </a>
-<a aria-label="Next: Redis" class="md-footer__link md-footer__link--next" href="Cache/Redis.html" rel="next">
+<a aria-label="Next: Communication" class="md-footer__link md-footer__link--next" href="../Management/Communication.html" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Redis
+              Communication
             </div>
 </div>
 <div class="md-footer__button md-icon">

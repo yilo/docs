@@ -5,6 +5,8 @@ tags:
     - 2023
     - Architecture
     - Message
+    - Kafka
+    - RocketMQ
 ---
 
 # Message

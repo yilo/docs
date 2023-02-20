@@ -14,23 +14,23 @@ pip3 install mkdocs-drawio-exporter
 
 pip3 install mkdocs-video
 
-pip install -U mkdocs-awesome-pages-plugin
+pip3 install -U mkdocs-awesome-pages-plugin
 
-pip install -U git+https://github.com/frankkopp/mkdocs-redirects.git
+pip3 install -U git+https://github.com/frankkopp/mkdocs-redirects.git
 
-pip install -U git+https://github.com/vuquangtrong/mkdocs-pdf-with-js-plugin.git
+pip3 install -U git+https://github.com/vuquangtrong/mkdocs-pdf-with-js-plugin.git
 
-pip install -U mkdocs-git-revision-date-localized-plugin
+pip3 install -U mkdocs-git-revision-date-localized-plugin
 
-pip install -U mkdocs-encryptcontent-plugin
+pip3 install -U mkdocs-encryptcontent-plugin
 
-pip install -U mkdocs-exclude
+pip3 install -U mkdocs-exclude
 
-pip install -U markdown-captions
+pip3 install -U markdown-captions
 
-pip install -U markdown-customblocks
+pip3 install -U markdown-customblocks
 
-pip install -U git+https://github.com/vuquangtrong/cell_row_span.git
+pip3 install -U git+https://github.com/vuquangtrong/cell_row_span.git
 
 pip install mkdocs-glightbox
 

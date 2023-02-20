@@ -32,5 +32,10 @@ pip install -U markdown-customblocks
 
 pip install -U git+https://github.com/vuquangtrong/cell_row_span.git
 
+pip install mkdocs-glightbox
+
+pip install mkdocs-kroki-plugin
+
+
 
 mkdocs gh-deploy -c -b gh-pages

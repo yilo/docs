@@ -32,9 +32,9 @@ pip3 install -U markdown-customblocks
 
 pip3 install -U git+https://github.com/vuquangtrong/cell_row_span.git
 
-pip install mkdocs-glightbox
+pip3 install mkdocs-glightbox
 
-pip install mkdocs-kroki-plugin
+pip3 install mkdocs-kroki-plugin
 
 
 

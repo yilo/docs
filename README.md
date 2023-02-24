@@ -36,6 +36,6 @@ pip3 install mkdocs-glightbox
 
 pip3 install mkdocs-kroki-plugin
 
-
+pip3 install mkdocs-build-plantuml-plugin
 
 mkdocs gh-deploy -c -b gh-pages
